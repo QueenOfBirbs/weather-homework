@@ -1,0 +1,25 @@
+#header {
+border:black;
+border-style: dashed;
+}
+
+#sidebar {
+    border:yellow;
+    border-style: dashed;
+}
+
+#display-box {
+    border:pink;
+    border-style: dashed;
+}
+
+#forecast {
+    border:purple;
+    border-style: dashed;
+}
+
+#card {
+    border:blue;
+    border-style: dashed;
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Planner</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+    <!--header-->
+    <header class="row">
+        <h1 id="header" class="col-12">Weather Dashboard</h1>
+    </header>
+
+    <!--sidebar-->
+    <div class="container">
+        <div class="row">
+            <!--search bar and button-->
+            <div class="col-2" id="sidebar">
+                <label>Search for a city:</label>
+                <input type="text" class="form-control">
+                <button>Search</button>
+            </div>
+
+            <!--display weather box-->
+            <div id="display-box">
+                <div class="col-10">
+                    <h2>Point Pleasant</h2>
+                    <ul>
+                        <li class="list-group-item">Temperature:</li>
+                        <li class="list-group-item">Wind:</li>
+                        <li class="list-group-item">Humidity:</li>
+                        <li class="list-group-item">UV Index:</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--city buttons-->
+    <div class="container">
+        <div class="row">
+            <ul class="col-2" id="sidebar">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Portland</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Anaheim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Svalbard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Seattle</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Point Pleasant</a>
+                </li>
+            </ul>
+
+            <!-- 5-day forecast -->
+            <div class="col-10">
+                <div class="container" id="forecast">
+                    <div class="row" class="col-12">
+                        <div id="card">
+                            <div class="card-body" class="col-2">
+                                <h5 class="card-title">Day 1</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Temperature:</li>
+                                    <li class="list-group-item">Wind:</li>
+                                    <li class="list-group-item">Humidity:</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="card">
+                            <div class="card-body" class="col-2">
+                                <h5 class="card-title">Day 2</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Temperature:</li>
+                                    <li class="list-group-item">Wind:</li>
+                                    <li class="list-group-item">Humidity:</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="card">
+                            <div class="card-body" class="col-2">
+                                <h5 class="card-title">Day 3</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Temperature:</li>
+                                    <li class="list-group-item">Wind:</li>
+                                    <li class="list-group-item">Humidity:</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="card">
+                            <div class="card-body" class="col-2">
+                                <h5 class="card-title">Day 4</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Temperature:</li>
+                                    <li class="list-group-item">Wind:</li>
+                                    <li class="list-group-item">Humidity:</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="card">
+                            <div class="card-body" class="col-2">
+                                <h5 class="card-title">Day 5</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Temperature:</li>
+                                    <li class="list-group-item">Wind:</li>
+                                    <li class="list-group-item">Humidity:</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
