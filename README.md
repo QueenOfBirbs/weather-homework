@@ -1,7 +1,7 @@
 # weather-homework
  
 
-USER STORY
+---USER STORY---
 
 AS A traveler
 I WANT to see the weather outlook for multiple cities
@@ -9,8 +9,7 @@ SO THAT I can plan a trip accordingly
 
 
 
-
-ACCEPTANCE CRITERIA
+---ACCEPTANCE CRITERIA---
 
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
@@ -26,13 +25,13 @@ THEN I am again presented with current and future conditions for that city
 
 
 
-WHAT I GOT DONE
+---WHAT I GOT DONE---
 
 as far as i know i got all of the acceptance criteria done!
 sorry it's kinda ugly, i got tired after finishing it and didn't feel like going ham on the css
 
 
 
-NOTES
+---NOTES---
 
 photos of the finished homework are in the finished folder!
