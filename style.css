@@ -1,25 +1,26 @@
-#header {
-border:black;
-border-style: dashed;
+
+*{
+    box-sizing: border-box;
+    
 }
 
-#sidebar {
-    border:yellow;
-    border-style: dashed;
+body {
+    
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
-
-#display-box {
-    border:pink;
-    border-style: dashed;
+h3{
+    font-weight: bold;
 }
-
-#forecast {
-    border:purple;
-    border-style: dashed;
+.forecast{
+    
+    font-size: 0.9em;
 }
-
-#card {
-    border:blue;
-    border-style: dashed;
+span{
+    font-size: 1em;
 }
-
+li:hover{
+    background-color: lightslategray;
+    text-decoration: underline;
+}
