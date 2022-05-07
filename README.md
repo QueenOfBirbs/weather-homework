@@ -35,4 +35,5 @@ sorry it's kinda ugly, i got tired after finishing it and didn't feel like going
 
 
 NOTES
+
 photos of the finished homework are in the finished folder!
