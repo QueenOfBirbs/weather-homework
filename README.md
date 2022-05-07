@@ -1,6 +1,5 @@
 # weather-homework
  
-# ORM-homework
 
 USER STORY
 
