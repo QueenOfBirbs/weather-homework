@@ -7,12 +7,12 @@ var clearButton = $("#clear-history");
 var currentCity = $("#current-city");
 var currentTemperature = $("#temperature");
 var currentHumidty = $("#humidity");
-var currentWSpeed = $("#wind-speed");
-var currentUvindex = $("#uv-index");
+var currentWind = $("#wind-speed");
+var CurrentUV = $("#uv-index");
 var sCity = [];
 
 // sees if city searched by user is in local storage
-function find(c) {
+function checkStorage(c) {
     for (var i = 0; i < sCity.length; i++) {
         if (c.toUpperCase() === sCity[i]) {
             return -1;
@@ -57,7 +57,7 @@ function currentWeather(city) {
         // displays wind speed
         var ws = response.wind.speed;
         var windsmph = (ws * 2.237).toFixed(1);
-        $(currentWSpeed).html(windsmph + "MPH");
+        $(currentWind).html(windsmph + "MPH");
 
         // displays uv index
         UVIndex(response.coord.lon, response.coord.lat);
@@ -70,13 +70,13 @@ function currentWeather(city) {
                 sCity.push(city.toUpperCase()
                 );
                 localStorage.setItem("cityname", JSON.stringify(sCity));
-                addToList(city);
+                newLI(city);
             }
             else {
-                if (find(city) > 0) {
+                if (checkStorage(city) > 0) {
                     sCity.push(city.toUpperCase());
                     localStorage.setItem("cityname", JSON.stringify(sCity));
-                    addToList(city);
+                    newLI(city);
                 }
             }
         }
@@ -90,7 +90,7 @@ function UVIndex(ln, lt) {
         url: uvqURL,
         method: "GET"
     }).then(function (response) {
-        $(currentUvindex).html(response.value);
+        $(CurrentUV).html(response.value);
     });
 }
 
@@ -121,14 +121,14 @@ function forecast(cityid) {
 }
 
 // add to search history list
-function addToList(c) {
+function newLI(c) {
     var listEl = $("<li>" + c.toUpperCase() + "</li>");
     $(listEl).attr("class", "list-group-item");
     $(listEl).attr("data-value", c.toUpperCase());
     $(".list-group").append(listEl);
 }
 
-function invokePastSearch(event) {
+function pastSearch(event) {
     var liEl = event.target;
     if (event.target.matches("li")) {
         city = liEl.textContent.trim();
@@ -144,7 +144,7 @@ function loadlastCity() {
     if (sCity !== null) {
         sCity = JSON.parse(localStorage.getItem("cityname"));
         for (i = 0; i < sCity.length; i++) {
-            addToList(sCity[i]);
+            newLI(sCity[i]);
         }
         city = sCity[i - 1];
         currentWeather(city);
@@ -152,7 +152,7 @@ function loadlastCity() {
 
 }
 // clears history
-function clearHistory(event) {
+function deleteHistory(event) {
     event.preventDefault();
     sCity = [];
     localStorage.removeItem("cityname");
@@ -161,9 +161,9 @@ function clearHistory(event) {
 }
 // click items
 $("#search-button").on("click", displayWeather);
-$(document).on("click", invokePastSearch);
+$(document).on("click", pastSearch);
 $(window).on("load", loadlastCity);
-$("#clear-history").on("click", clearHistory);
+$("#clear-history").on("click", deleteHistory);
 
 
 
