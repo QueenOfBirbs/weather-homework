@@ -31,8 +31,8 @@ WHAT I GOT DONE
 
 as far as i know i got all of the acceptance criteria done!
 sorry it's kinda ugly, i got tired after finishing it and didn't feel like going ham on the css
-photos of the finished homework are in the finished file!
 
 
 
 NOTES
+photos of the finished homework are in the finished folder!
